@@ -19,11 +19,13 @@ public class LembreteMapper {
 	}
 
 	public void adicionar(Lembrete lembrete) {
+		lembrete.setId(lembretes.size() + 1);
 
 		// Data Criação
 		Instant agora = LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault()).toInstant();
 		Date hoje = Date.from(agora);
 		lembrete.setDataCadastro(hoje);
+	
 
 		lembretes.add(lembrete);
 	}
