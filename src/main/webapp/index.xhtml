@@ -9,6 +9,7 @@
 </h:head>
 <h:body>
 
+<h:link value="Novo Lembrete" outcome="adicionar" />
 
 	<h:dataTable value="#{lembreteBean.lembretes}" var="lembrete">
 		<h:column>
@@ -29,10 +30,22 @@
 				<f:convertDateTime pattern="dd/MM/YYYY"/>	
 				</h:outputText>
 			</h:column>
-	
-	
+			
+			
+			
+			
+			
+			<h:column>
+				<h:link value="Editar" outcome="editar">
+					<f:param name="lembrete" value="#{lembrete.id}"/>
+				</h:link>
+			</h:column>
+			<h:column>
+				<h:link value="Remover" outcome="remover">
+					<f:param name="lembrete" value="#{lembrete.id}"/>
+				</h:link>
+			</h:column>
 	</h:dataTable>
-
 
 </h:body>
 </html>
