@@ -4,13 +4,34 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Cadastro de UsuÁrio</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cadastro Usuário</title>
 </h:head>
 <h:body>
 
 
-<h:outputText value="OLA MUNDO" />
+	<h:dataTable value="#{lembreteBean.lembretes}" var="lembrete">
+		<h:column>
+			<f:facet name="header">#</f:facet>
+				#{lembrete.id}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Título</f:facet>
+				#{lembrete.titulo}
+		</h:column>
+		<h:column>
+			<f:facet name="header">Descrição</f:facet>
+				#{lembrete.descricao}
+		</h:column>
+			<h:column>
+				<f:facet name="header">Início</f:facet>
+				<h:outputText value="#{lembrete.dataInicio.time}" >
+				<f:convertDateTime pattern="dd/MM/YYYY"/>	
+				</h:outputText>
+			</h:column>
+	
+	
+	</h:dataTable>
 
 
 </h:body>
