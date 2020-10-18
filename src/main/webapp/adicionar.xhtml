@@ -7,6 +7,9 @@
 <h:head></h:head> 
 <body>
  <h3>Adicionar lembrete</h3>
+ <f:metadata>
+ 	<f:event type="preRenderView" listener="#{lembreteBean.init}"/>
+ </f:metadata>
 
     <h:form>
         <h:panelGrid columns="3">
@@ -18,7 +21,9 @@
             <h:message for="titulo"/>
 
             <h:outputLabel value="Descrição:"/>
-            <h:inputTextarea id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true">
+            <h:inputTextarea id="descricao" value="#{lembreteBean.lembrete.descricao}" required="true"
+            
+            requiredMessage="A Descrição é Obrigatório  !!">
                 <f:validateLength minimum="3" maximum="255"/>
             </h:inputTextarea>
             

@@ -64,9 +64,7 @@ public class lembreteBean {
 		context.getExternalContext().getFlash().setKeepMessages(true);
 		
 		return "home";
-		
-		
-		
+	
 	}
 	
 	
@@ -81,8 +79,7 @@ public class lembreteBean {
 			
 			FacesContext.getCurrentInstance().addMessage(null, message);
 		}
-		
-		
+	
 	}
 	
 	public String editar() {
@@ -94,8 +91,7 @@ public class lembreteBean {
 		context.addMessage(null, new FacesMessage("Lembrete editado com sucesso"));
 		context.getExternalContext().getFlash().setKeepMessages(true);
 		return "home";
-		
-		
+	
 	}
 
 }

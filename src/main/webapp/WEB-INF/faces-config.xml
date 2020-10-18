@@ -4,6 +4,14 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
     version="2.3">
+    <application>
+    	<locale-config>
+    		<default-locale>pt_BR</default-locale>
+    		
+    	</locale-config>
+    	<message-bundle>br.com.lembrete.web.i18n.Messages</message-bundle>
+    
+    </application>
     
     <navigation-rule>
     	<from-view-id>/*</from-view-id>
